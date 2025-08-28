@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dicu7f6dbk3tw"]
+
+[ext_resource type="Script" uid="uid://ljrq20uuveq7" path="res://scenes/franchise_mode/customer_chair.gd" id="1_8eyee"]
+[ext_resource type="Texture2D" uid="uid://sv1dun45l00d" path="res://assets/borrowed_assets/objects/seating/seating-sheet.png" id="2_sc31y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sc31y"]
+size = Vector2(22, 14.25)
+
+[node name="CustomerChair" type="Node2D" groups=["seats"]]
+script = ExtResource("1_8eyee")
+
+[node name="CustomerSeatNode" type="Node2D" parent="."]
+position = Vector2(2, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_sc31y")
+flip_h = true
+hframes = 8
+vframes = 6
+frame = 7
+
+[node name="CustomerHoverNode" type="Node2D" parent="."]
+position = Vector2(3, -9)
+
+[node name="MouseCollision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseCollision"]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_sc31y")
+disabled = true
+
+[connection signal="mouse_entered" from="MouseCollision" to="." method="_on_mouse_collision_mouse_entered"]

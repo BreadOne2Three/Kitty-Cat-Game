@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf07sjud2xjhy"]
+
+[ext_resource type="Script" uid="uid://g0ltk22nelkb" path="res://order_submit.gd" id="1_qpvrl"]
+[ext_resource type="Texture2D" uid="uid://b765a0arypfn2" path="res://assets/order_submit.png" id="2_68ysj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3shoe"]
+radius = 15.0
+
+[node name="OrderSubmit" type="Node2D"]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_qpvrl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_68ysj")
+hframes = 4
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 110)
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_3shoe")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

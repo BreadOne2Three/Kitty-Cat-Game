@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7q5eweawywqb"]
+
+[ext_resource type="Script" uid="uid://d3tlhhrhn2ufu" path="res://debug_customer.gd" id="1_anu26"]
+
+[node name="debug_textpopup" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_anu26")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+fit_content = true
+autowrap_mode = 0
+vertical_alignment = 1

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg1vxmr0whle5"]
+
+[ext_resource type="Script" uid="uid://ri1jmwpkf820" path="res://scenes/player_types/player_franchise_PARENT.gd" id="1_f86cu"]
+[ext_resource type="Texture2D" uid="uid://b7klmpw58wkom" path="res://assets/ooeeaa.jpeg" id="2_y8agu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rh2kr"]
+size = Vector2(32, 32)
+
+[node name="PlayerFranchisePARENT" type="Node2D"]
+
+[node name="Sprite&Movement" type="CharacterBody2D" parent="."]
+motion_mode = 1
+script = ExtResource("1_f86cu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite&Movement"]
+scale = Vector2(0.142, 0.142)
+texture = ExtResource("2_y8agu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite&Movement"]
+shape = SubResource("RectangleShape2D_rh2kr")

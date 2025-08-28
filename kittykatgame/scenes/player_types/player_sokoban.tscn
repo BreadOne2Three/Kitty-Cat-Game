@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfvdd5ef2dok6"]
+
+[ext_resource type="Script" uid="uid://dwr24i28fxqq" path="res://scenes/player_types/player_sokoban.gd" id="1_kmwy7"]
+[ext_resource type="Texture2D" uid="uid://b7klmpw58wkom" path="res://assets/ooeeaa.jpeg" id="2_jfvwg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfvwg"]
+size = Vector2(32, 32)
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_jfvwg"]
+length = 22.0
+
+[node name="PlayerSokoban" type="Node2D"]
+
+[node name="PlayerChar" type="CharacterBody2D" parent="."]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_kmwy7")
+
+[node name="cat" type="Sprite2D" parent="PlayerChar"]
+scale = Vector2(0.142, 0.142)
+texture = ExtResource("2_jfvwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerChar"]
+shape = SubResource("RectangleShape2D_jfvwg")
+
+[node name="CollisionRaycast" type="Area2D" parent="PlayerChar"]
+rotation = -1.5708
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerChar/CollisionRaycast"]
+shape = SubResource("SeparationRayShape2D_jfvwg")

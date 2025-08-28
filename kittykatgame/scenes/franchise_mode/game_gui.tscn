@@ -1,0 +1,118 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2fbvvvbvq3uy"]
+
+[ext_resource type="Script" uid="uid://lry4augakifx" path="res://gui.gd" id="1_8gt3h"]
+[ext_resource type="Texture2D" uid="uid://bl4pgxey68s6s" path="res://assets/stars.png" id="2_dafyb"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8gt3h")
+
+[node name="TimeOfDay" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -54.0
+offset_top = 17.0
+offset_right = -14.0
+offset_bottom = 57.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="DEBUG_Time" type="Label" parent="TimeOfDay"]
+layout_mode = 0
+offset_left = -46.0
+offset_top = -1.0
+offset_right = 51.0
+offset_bottom = 22.0
+text = "TIME: 0.0"
+
+[node name="StatsMenuPopUp" type="Button" parent="TimeOfDay"]
+layout_mode = 0
+offset_left = -49.0
+offset_right = 52.0
+offset_bottom = 21.0
+disabled = true
+
+[node name="RestaurantRating" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="DEBUG_Stars" type="Label" parent="RestaurantRating"]
+layout_mode = 0
+offset_left = -21.0
+offset_top = -43.0
+offset_right = 19.0
+offset_bottom = -20.0
+
+[node name="StarContainer" type="Control" parent="RestaurantRating"]
+anchors_preset = 0
+offset_top = -10.0
+offset_bottom = -10.0
+mouse_filter = 2
+
+[node name="S1" type="Sprite2D" parent="RestaurantRating/StarContainer"]
+texture = ExtResource("2_dafyb")
+offset = Vector2(-32, 0)
+hframes = 3
+
+[node name="S2" type="Sprite2D" parent="RestaurantRating/StarContainer"]
+texture = ExtResource("2_dafyb")
+offset = Vector2(-16, 0)
+hframes = 3
+
+[node name="S3" type="Sprite2D" parent="RestaurantRating/StarContainer"]
+texture = ExtResource("2_dafyb")
+hframes = 3
+
+[node name="S4" type="Sprite2D" parent="RestaurantRating/StarContainer"]
+texture = ExtResource("2_dafyb")
+offset = Vector2(16, 0)
+hframes = 3
+
+[node name="S5" type="Sprite2D" parent="RestaurantRating/StarContainer"]
+texture = ExtResource("2_dafyb")
+offset = Vector2(32, 0)
+hframes = 3
+
+[node name="RestaurantStats" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="DEBUG" type="VBoxContainer" parent="RestaurantStats"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 19.0
+offset_right = 62.0
+offset_bottom = 123.0
+
+[node name="DEBUG_CLEANLINESS" type="Label" parent="RestaurantStats/DEBUG"]
+layout_mode = 2
+text = "Cleanliness: "
+
+[node name="DEBUG_CUSTOMERRUSH_STATE" type="Label" parent="RestaurantStats/DEBUG"]
+layout_mode = 2
+text = "Customer Rush State: "
+
+[node name="DEBUG_AMENITIES" type="Label" parent="RestaurantStats/DEBUG"]
+layout_mode = 2
+text = "Amenities
+"
+
+[node name="DEBUG_SERVICEPERCEPTION" type="Label" parent="RestaurantStats/DEBUG"]
+layout_mode = 2
+text = "Service Perception: "

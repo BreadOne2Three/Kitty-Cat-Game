@@ -1,0 +1,125 @@
+[gd_scene load_steps=9 format=3 uid="uid://h4s544pu2a8p"]
+
+[ext_resource type="Script" uid="uid://dvk3trygjg3tb" path="res://scenes/franchise_mode/levels/customer_table.gd" id="1_8eyee"]
+[ext_resource type="PackedScene" uid="uid://dicu7f6dbk3tw" path="res://scenes/franchise_mode/customerChair.tscn" id="2_l6vww"]
+[ext_resource type="Texture2D" uid="uid://c3ix5bjo05bfv" path="res://assets/table.png" id="3_imop7"]
+[ext_resource type="PackedScene" uid="uid://d3wlrofelpiyq" path="res://scenes/franchise_mode/tilesets/tables_tilesets.tscn" id="4_l6vww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5lrj"]
+size = Vector2(150, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6vww"]
+size = Vector2(150, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxl83"]
+size = Vector2(44, 32.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l6vww"]
+radius = 0.01
+
+[node name="CustomerTable" type="StaticBody2D" groups=["dropable", "navigation"]]
+script = ExtResource("1_8eyee")
+
+[node name="DropRadius" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_b5lrj")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_l6vww")
+
+[node name="Seats2" type="Node2D" parent="."]
+position = Vector2(0, -10)
+
+[node name="LeftSide" type="Node2D" parent="Seats2"]
+position = Vector2(-25, 0)
+
+[node name="Left_Chair2" parent="Seats2/LeftSide" instance=ExtResource("2_l6vww")]
+position = Vector2(-17, 0)
+
+[node name="RightSide" type="Node2D" parent="Seats2"]
+position = Vector2(25, 0)
+scale = Vector2(1, -1)
+
+[node name="Right_Chair2" parent="Seats2/RightSide" instance=ExtResource("2_l6vww")]
+position = Vector2(17, 0)
+rotation = 3.14159
+
+[node name="Seats4" type="Node2D" parent="."]
+
+[node name="LeftSide" type="Node2D" parent="Seats4"]
+position = Vector2(-25, -7)
+
+[node name="TopLeft_Seat4" parent="Seats4/LeftSide" instance=ExtResource("2_l6vww")]
+position = Vector2(-18, -10)
+
+[node name="BottomLeft_Seat4" parent="Seats4/LeftSide" instance=ExtResource("2_l6vww")]
+position = Vector2(-22, 5)
+
+[node name="RightSide" type="Node2D" parent="Seats4"]
+position = Vector2(25, -7)
+scale = Vector2(1, -1)
+
+[node name="TopRight_Seat4" parent="Seats4/RightSide" instance=ExtResource("2_l6vww")]
+position = Vector2(18, 10)
+rotation = 3.14159
+
+[node name="BottomRight_Seat4" parent="Seats4/RightSide" instance=ExtResource("2_l6vww")]
+position = Vector2(22, -5)
+rotation = 3.14159
+
+[node name="Seats6" type="Node2D" parent="."]
+
+[node name="LeftSide" type="Node2D" parent="Seats6"]
+position = Vector2(-25, -5)
+
+[node name="TopLeft_Seats6" parent="Seats6/LeftSide" instance=ExtResource("2_l6vww")]
+position = Vector2(-18, -14)
+
+[node name="MiddleLeft_Seats6" parent="Seats6/LeftSide" instance=ExtResource("2_l6vww")]
+position = Vector2(-22, 0)
+
+[node name="BottomLeft_Seats6" parent="Seats6/LeftSide" instance=ExtResource("2_l6vww")]
+position = Vector2(-26, 14)
+
+[node name="RightSide" type="Node2D" parent="Seats6"]
+position = Vector2(25, 0)
+scale = Vector2(-1, 1)
+
+[node name="TopRight_Seats6" parent="Seats6/RightSide" instance=ExtResource("2_l6vww")]
+position = Vector2(-18, -14)
+
+[node name="MiddleRight_Seats6" parent="Seats6/RightSide" instance=ExtResource("2_l6vww")]
+position = Vector2(-22, 0)
+
+[node name="BottomRight_Seats6" parent="Seats6/RightSide" instance=ExtResource("2_l6vww")]
+position = Vector2(-26, 14)
+
+[node name="Table" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_imop7")
+hframes = 3
+frame = 2
+
+[node name="Tables" parent="." instance=ExtResource("4_l6vww")]
+
+[node name="PartyHeartsLocation" type="Node2D" parent="."]
+position = Vector2(0, 28)
+
+[node name="ServerInteractPos" type="Area2D" parent="."]
+position = Vector2(0, -40)
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ServerInteractPos"]
+shape = SubResource("RectangleShape2D_sxl83")
+
+[node name="NoiseRadius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoiseRadius"]
+shape = SubResource("CircleShape2D_l6vww")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="ServerInteractPos" to="." method="_on_server_interact_pos_body_entered"]

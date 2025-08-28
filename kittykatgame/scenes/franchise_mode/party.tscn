@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3 uid="uid://7043hntij4xx"]
+
+[ext_resource type="Script" uid="uid://cuu8v4q18pete" path="res://scenes/franchise_mode/party.gd" id="1_rnofy"]
+[ext_resource type="PackedScene" uid="uid://b7q5eweawywqb" path="res://scenes/franchise_mode/debug_textpopup.tscn" id="2_1ijwp"]
+[ext_resource type="Texture2D" uid="uid://cry1bsli7gjxe" path="res://assets/heart.png" id="2_02kmk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ac6gv"]
+size = Vector2(50, 50)
+
+[node name="Party" type="Node2D"]
+script = ExtResource("1_rnofy")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 33
+
+[node name="collection_radius" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ac6gv")
+disabled = true
+
+[node name="debug_textpopup" parent="." instance=ExtResource("2_1ijwp")]
+offset_top = 40.0
+offset_bottom = 40.0
+
+[node name="HeartContainer" type="Node2D" parent="."]
+position = Vector2(0, 30)
+
+[node name="H1" type="Sprite2D" parent="HeartContainer"]
+position = Vector2(-16, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_02kmk")
+hframes = 3
+
+[node name="H2" type="Sprite2D" parent="HeartContainer"]
+position = Vector2(-8, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_02kmk")
+hframes = 3
+
+[node name="H3" type="Sprite2D" parent="HeartContainer"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_02kmk")
+hframes = 3
+
+[node name="H4" type="Sprite2D" parent="HeartContainer"]
+position = Vector2(8, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_02kmk")
+hframes = 3
+
+[node name="H5" type="Sprite2D" parent="HeartContainer"]
+position = Vector2(16, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_02kmk")
+hframes = 3
+
+[node name="EventTimers" type="Timer" parent="."]
+one_shot = true
+
+[node name="SpriteNodes" type="Node2D" parent="."]
+
+[node name="EventClicker" type="Button" parent="."]
+visible = false
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+disabled = true
+text = "||||
+||||"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_party_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="timeout" from="EventTimers" to="." method="_on_event_timer_timeout"]
+[connection signal="pressed" from="EventClicker" to="." method="_on_event_clicker_pressed"]

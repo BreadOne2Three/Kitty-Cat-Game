@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4s8snxcm74ry"]
+
+[ext_resource type="Script" uid="uid://bmu4ku54jii8h" path="res://order_manager.gd" id="1_qftdm"]
+
+[node name="OrderManager" type="Node2D"]
+script = ExtResource("1_qftdm")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpqw56jpfdqgx"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1k7ju"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llgme"]
+size = Vector2(32, 32)
+
+[node name="MoveableBox" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="box_texture" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(32, 32)
+texture = SubResource("CanvasTexture_1k7ju")
+
+[node name="Player_Collision_Box" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_llgme")

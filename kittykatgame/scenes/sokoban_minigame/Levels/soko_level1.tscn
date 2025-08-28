@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://br8prjrokt1j"]
+
+[ext_resource type="PackedScene" uid="uid://dpqw56jpfdqgx" path="res://scenes/sokoban_minigame/moveable_box.tscn" id="1_8n641"]
+[ext_resource type="PackedScene" uid="uid://cfvdd5ef2dok6" path="res://scenes/player_types/player_sokoban.tscn" id="2_f6n83"]
+
+[node name="SokoLevel1" type="Node2D"]
+
+[node name="MoveableBox" parent="." instance=ExtResource("1_8n641")]
+position = Vector2(100, 100)
+scale = Vector2(5, 5)
+
+[node name="PlayerSokoban" parent="." instance=ExtResource("2_f6n83")]
+position = Vector2(500, 100)
+scale = Vector2(5, 5)

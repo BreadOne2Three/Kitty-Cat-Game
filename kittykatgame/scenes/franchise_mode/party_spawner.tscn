@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1nn37ult6cc3"]
+
+[ext_resource type="Script" uid="uid://8tngsrgwpaha" path="res://scenes/franchise_mode/party_spawner.gd" id="1_dacfs"]
+[ext_resource type="Texture2D" uid="uid://deot7xnbbpy7x" path="res://assets/hoststand.png" id="2_5uyam"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dacfs"]
+size = Vector2(36, 68)
+
+[node name="PartySpawner" type="Node2D"]
+script = ExtResource("1_dacfs")
+
+[node name="HostStand" type="Sprite2D" parent="."]
+texture = ExtResource("2_5uyam")
+
+[node name="SpawnNode" type="Node2D" parent="."]
+position = Vector2(-150, 0)
+
+[node name="customer_spawn_timer" type="Timer" parent="."]
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["navigation"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_dacfs")

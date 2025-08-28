@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="OrderData" load_steps=2 format=3 uid="uid://y2niqcrmxus7"]
+
+[ext_resource type="Script" uid="uid://bnvrn41774w0o" path="res://OrderData.gd" id="1_1aw26"]
+
+[resource]
+script = ExtResource("1_1aw26")
+order_id = 0
+table_id = 0
+party_id = 0
+order_time = 7.5
+cook_time = 6.0
+eating_time = 10.0
+time_spawned = 0.0
+min_payment = 10
+max_payment = 300
+patience = 50.0
+patience_decay_rate = 1.0
+customer_generates_filth = false
+filth_rate = 0.0
+customer_made_mess = false
+customer_generates_noise = false
+customer_noisiness = 0.5
+customer_noise_rate = 0.2
+refill_rate = 0.65
+needs_refill = false
+party_modifiers = {}
+metadata/_custom_type_script = "uid://bnvrn41774w0o"

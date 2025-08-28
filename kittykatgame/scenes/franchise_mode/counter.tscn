@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvutgvgsri8ws"]
+
+[ext_resource type="Script" uid="uid://daq5etfwvoxey" path="res://scenes/franchise_mode/counter.gd" id="1_hsb1g"]
+[ext_resource type="Texture2D" uid="uid://mxwljxou81k4" path="res://assets/counter.png" id="1_ux7hy"]
+[ext_resource type="PackedScene" uid="uid://dlmsxlbt0a6bb" path="res://interactible.tscn" id="2_bybgm"]
+[ext_resource type="PackedScene" uid="uid://bs7xp25gbyl76" path="res://scenes/franchise_mode/dish.tscn" id="4_86iss"]
+[ext_resource type="PackedScene" uid="uid://cf07sjud2xjhy" path="res://scenes/franchise_mode/order_submit.tscn" id="5_l7n6o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bybgm"]
+size = Vector2(309, 86)
+
+[node name="Counter" type="Node2D"]
+script = ExtResource("1_hsb1g")
+
+[node name="Interactible" parent="." instance=ExtResource("2_bybgm")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.386875, 0.479899)
+texture = ExtResource("1_ux7hy")
+hframes = 2
+
+[node name="DishesSpawn" type="Node2D" parent="."]
+position = Vector2(26, -1)
+
+[node name="dish" parent="DishesSpawn" instance=ExtResource("4_86iss")]
+position = Vector2(-95, -25)
+
+[node name="dish2" parent="DishesSpawn" instance=ExtResource("4_86iss")]
+position = Vector2(-70, -25)
+
+[node name="dish3" parent="DishesSpawn" instance=ExtResource("4_86iss")]
+position = Vector2(-45, -25)
+
+[node name="dish4" parent="DishesSpawn" instance=ExtResource("4_86iss")]
+position = Vector2(-20, -25)
+
+[node name="dish5" parent="DishesSpawn" instance=ExtResource("4_86iss")]
+position = Vector2(5, -25)
+
+[node name="dish6" parent="DishesSpawn" instance=ExtResource("4_86iss")]
+position = Vector2(30, -25)
+
+[node name="dish7" parent="DishesSpawn" instance=ExtResource("4_86iss")]
+position = Vector2(55, -25)
+
+[node name="dish8" parent="DishesSpawn" instance=ExtResource("4_86iss")]
+position = Vector2(80, -25)
+
+[node name="dish9" parent="DishesSpawn" instance=ExtResource("4_86iss")]
+position = Vector2(105, -25)
+
+[node name="OrderSubmission" type="Node2D" parent="."]
+position = Vector2(-116, -37)
+
+[node name="SubmitOrder" type="Button" parent="OrderSubmission"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -11.5
+offset_right = 22.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+disabled = true
+text = "SUBMIT 
+ORDER"
+
+[node name="OrderSubmit" parent="OrderSubmission" instance=ExtResource("5_l7n6o")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["navigation"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.5, -13)
+shape = SubResource("RectangleShape2D_bybgm")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="OrderSubmission/SubmitOrder" to="." method="_on_submit_order_pressed"]
+[connection signal="startCooking" from="OrderSubmission/OrderSubmit" to="." method="_on_order_submit_start_cooking"]

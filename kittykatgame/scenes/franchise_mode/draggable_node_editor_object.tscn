@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfobjgcu2mopt"]
+
+[ext_resource type="Script" uid="uid://dfipjfmkct27q" path="res://draggable_node_editor_object.gd" id="1_2qn7u"]
+[ext_resource type="Texture2D" uid="uid://c3ix5bjo05bfv" path="res://assets/table.png" id="2_y34jn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnly3"]
+size = Vector2(128, 128)
+
+[node name="draggable_node_EDITOR_OBJECT" type="Node2D"]
+script = ExtResource("1_2qn7u")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_hnly3")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(4, 4)
+texture = ExtResource("2_y34jn")
+hframes = 3
+
+[node name="Tooltip" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Tooltip"]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 92.0
+bbcode_enabled = true
+text = "[center]poop fart stinky doodoo and poop"
+fit_content = true
+
+[connection signal="mouse_entered" from="StaticBody2D" to="." method="_on_static_body_2d_mouse_entered"]
+[connection signal="mouse_exited" from="StaticBody2D" to="." method="_on_static_body_2d_mouse_exited"]

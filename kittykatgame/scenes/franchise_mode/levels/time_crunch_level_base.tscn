@@ -1,0 +1,336 @@
+[gd_scene load_steps=13 format=3 uid="uid://bcifgs61lqtjb"]
+
+[ext_resource type="Script" uid="uid://ese4thgo3owx" path="res://scenes/franchise_mode/levels/time_crunch_level_base.gd" id="1_vam6w"]
+[ext_resource type="PackedScene" uid="uid://c1nn37ult6cc3" path="res://scenes/franchise_mode/party_spawner.tscn" id="2_3ajwb"]
+[ext_resource type="PackedScene" uid="uid://dvutgvgsri8ws" path="res://scenes/franchise_mode/counter.tscn" id="2_8f2pu"]
+[ext_resource type="PackedScene" uid="uid://b4xeg28yd5m72" path="res://pause_menu.tscn" id="3_3ajwb"]
+[ext_resource type="Script" uid="uid://be3fdwm883uv4" path="res://scenes/franchise_mode/levels/camera.gd" id="5_6dsr3"]
+[ext_resource type="PackedScene" uid="uid://bt5l0icdtdj24" path="res://scenes/franchise_mode/tilesets/world_tilesets.tscn" id="5_422im"]
+[ext_resource type="PackedScene" uid="uid://csl6rynn3mop8" path="res://scenes/franchise_mode/left_right_arrow.tscn" id="6_422im"]
+[ext_resource type="PackedScene" uid="uid://c2fbvvvbvq3uy" path="res://scenes/franchise_mode/game_gui.tscn" id="7_f2n1h"]
+[ext_resource type="PackedScene" uid="uid://h4s544pu2a8p" path="res://scenes/franchise_mode/customerTable.tscn" id="9_xd40v"]
+[ext_resource type="PackedScene" uid="uid://bup0c5wgbsr61" path="res://scenes/franchise_mode/player.tscn" id="10_d0l6u"]
+[ext_resource type="PackedScene" uid="uid://c4s8snxcm74ry" path="res://scenes/franchise_mode/order_manager.tscn" id="11_q5rfs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6dsr3"]
+size = Vector2(140, 360)
+
+[node name="TimeCrunchLevelBase" type="Node2D"]
+script = ExtResource("1_vam6w")
+level_script = "1-1"
+
+[node name="LengthOfDay" type="Timer" parent="."]
+
+[node name="RecalculateTimers" type="Timer" parent="."]
+
+[node name="TableSpawn_Nodes" type="Node2D" parent="."]
+
+[node name="R1C1" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(618, 347)
+
+[node name="R1C2" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(768, 347)
+
+[node name="R1C3" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(918, 347)
+
+[node name="R1C4" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1068, 347)
+
+[node name="R1C5" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1218, 347)
+
+[node name="R1C6" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1368, 347)
+
+[node name="R1C7" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1518, 347)
+
+[node name="R1C8" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1668, 347)
+
+[node name="R1C9" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1818, 347)
+
+[node name="R2C1" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(618, 472)
+
+[node name="R2C2" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(768, 472)
+
+[node name="R2C3" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(918, 472)
+
+[node name="R2C4" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1068, 472)
+
+[node name="R2C5" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1218, 472)
+
+[node name="R2C6" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1368, 472)
+
+[node name="R2C7" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1518, 472)
+
+[node name="R2C8" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1668, 472)
+
+[node name="R2C9" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1818, 472)
+
+[node name="R3C1" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(618, 597)
+
+[node name="R3C2" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(768, 597)
+
+[node name="R3C3" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(918, 597)
+
+[node name="R3C4" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1068, 597)
+
+[node name="R3C5" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1218, 597)
+
+[node name="R3C6" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1368, 597)
+
+[node name="R3C7" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1518, 597)
+
+[node name="R3C8" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1668, 597)
+
+[node name="R3C9" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1818, 597)
+
+[node name="R4C1" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(618, 722)
+
+[node name="R4C2" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(768, 722)
+
+[node name="R4C3" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(918, 722)
+
+[node name="R4C4" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1068, 722)
+
+[node name="R4C5" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1218, 722)
+
+[node name="R4C6" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1368, 722)
+
+[node name="R4C7" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1518, 722)
+
+[node name="R4C8" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1668, 722)
+
+[node name="R4C9" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1818, 722)
+
+[node name="R5C1" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(618, 847)
+
+[node name="R5C2" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(768, 847)
+
+[node name="R5C3" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(918, 847)
+
+[node name="R5C4" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1068, 847)
+
+[node name="R5C5" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1218, 847)
+
+[node name="R5C6" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1368, 847)
+
+[node name="R5C7" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1518, 847)
+
+[node name="R5C8" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1668, 847)
+
+[node name="R5C9" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1818, 847)
+
+[node name="R6C1" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(618, 972)
+
+[node name="R6C2" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(768, 972)
+
+[node name="R6C3" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(918, 972)
+
+[node name="R6C4" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1068, 972)
+
+[node name="R6C5" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1218, 972)
+
+[node name="R6C6" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1368, 972)
+
+[node name="R6C7" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1518, 972)
+
+[node name="R6C8" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1668, 972)
+
+[node name="R6C9" type="Node2D" parent="TableSpawn_Nodes"]
+position = Vector2(1818, 972)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_3ajwb")]
+metadata/_edit_use_anchors_ = true
+
+[node name="WorldTileMapLayers" parent="." instance=ExtResource("5_422im")]
+position = Vector2(-186, 276)
+
+[node name="PartySpawner" parent="." instance=ExtResource("2_3ajwb")]
+position = Vector2(-65, 318)
+
+[node name="Counter" parent="." instance=ExtResource("2_8f2pu")]
+position = Vector2(623, 146)
+
+[node name="CameraNode" type="Node2D" parent="."]
+
+[node name="Camera" type="Camera2D" parent="CameraNode"]
+position = Vector2(-97, 180)
+script = ExtResource("5_6dsr3")
+
+[node name="Positions" type="Node2D" parent="CameraNode/Camera"]
+
+[node name="EntrancePosition" type="Node2D" parent="CameraNode/Camera/Positions"]
+
+[node name="DiningMainPosition" type="Node2D" parent="CameraNode/Camera/Positions"]
+position = Vector2(650, 0)
+
+[node name="ShopPosition" type="Node2D" parent="CameraNode/Camera/Positions"]
+position = Vector2(0, -250)
+
+[node name="DiningSouthPosition" type="Node2D" parent="CameraNode/Camera/Positions"]
+position = Vector2(650, 300)
+
+[node name="KitchenPosition" type="Node2D" parent="CameraNode/Camera/Positions"]
+
+[node name="BathroomPosition" type="Node2D" parent="CameraNode/Camera/Positions"]
+position = Vector2(2500, 0)
+
+[node name="EntranceFromMainDiningArrow" parent="CameraNode" instance=ExtResource("6_422im")]
+offset_left = 250.0
+offset_top = 368.0
+offset_right = 250.0
+offset_bottom = 368.0
+scale = Vector2(1, 1)
+kind = 2
+flip = true
+
+[node name="MainDiningFromEntranceArrow" parent="CameraNode" instance=ExtResource("6_422im")]
+offset_left = 200.0
+offset_top = 368.0
+offset_right = 200.0
+offset_bottom = 368.0
+rotation = -3.14159
+scale = Vector2(1, -1)
+kind = 2
+
+[node name="BathroomArrow" parent="CameraNode" instance=ExtResource("6_422im")]
+offset_left = 800.0
+offset_top = 300.0
+offset_right = 800.0
+offset_bottom = 300.0
+rotation = -3.14159
+scale = Vector2(1, -1)
+kind = 1
+
+[node name="SouthDiningArrow" parent="CameraNode" instance=ExtResource("6_422im")]
+offset_left = 850.0
+offset_top = 368.0
+offset_right = 850.0
+offset_bottom = 368.0
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="MainDiningFromSouthArrow" parent="CameraNode" instance=ExtResource("6_422im")]
+offset_left = 850.0
+offset_top = 368.0
+offset_right = 850.0
+offset_bottom = 368.0
+rotation = -3.14159
+scale = Vector2(1, -1)
+flip = true
+
+[node name="Area2D" type="Area2D" parent="CameraNode"]
+collision_layer = 32
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraNode/Area2D"]
+position = Vector2(151, 180)
+shape = SubResource("RectangleShape2D_6dsr3")
+
+[node name="GUI_LAYER" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="GUI_LAYER" instance=ExtResource("7_f2n1h")]
+mouse_filter = 2
+
+[node name="TableSpawns" type="Node2D" parent="."]
+
+[node name="CustomerTable" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+position = Vector2(418, 334)
+table_num = 1
+
+[node name="CustomerTable2" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+position = Vector2(639, 333)
+table_num = 2
+
+[node name="CustomerTable3" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+position = Vector2(161, 464)
+table_num = 3
+
+[node name="CustomerTable4" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+position = Vector2(480, 464)
+table_num = 4
+
+[node name="CustomerTable5" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+position = Vector2(687, 464)
+table_num = 5
+
+[node name="CustomerTable6" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+position = Vector2(162, 691)
+table_num = 6
+
+[node name="CustomerTable7" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+position = Vector2(438, 691)
+table_num = 7
+
+[node name="CustomerTable8" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+position = Vector2(697, 693)
+table_num = 8
+
+[node name="Player" parent="." instance=ExtResource("10_d0l6u")]
+position = Vector2(-69, 78)
+
+[node name="OrderManager" parent="." node_paths=PackedStringArray("counter_ref", "table_array", "customerSpawner", "player_ref") instance=ExtResource("11_q5rfs")]
+counter_ref = NodePath("../Counter")
+table_array = NodePath("../TableSpawns")
+customerSpawner = NodePath("../PartySpawner")
+player_ref = NodePath("../Player")
+
+[connection signal="updateClock" from="." to="GUI_LAYER/GUI" method="updateClock"]
+[connection signal="timeout" from="LengthOfDay" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="RecalculateTimers" to="." method="_on_recalculate_timer_timeout"]
+[connection signal="pressed_arrow" from="CameraNode/EntranceFromMainDiningArrow" to="CameraNode/Camera" method="_on_left_arrow_pressed_arrow"]
+[connection signal="pressed_arrow" from="CameraNode/MainDiningFromEntranceArrow" to="CameraNode/Camera" method="_on_right_arrow_pressed_arrow"]
+[connection signal="pressed_arrow" from="CameraNode/BathroomArrow" to="CameraNode/Camera" method="_on_right_arrow_pressed_arrow"]
+[connection signal="pressed_arrow" from="CameraNode/SouthDiningArrow" to="CameraNode/Camera" method="_on_right_arrow_pressed_arrow"]
+[connection signal="pressed_arrow" from="CameraNode/MainDiningFromSouthArrow" to="CameraNode/Camera" method="_on_right_arrow_pressed_arrow"]
+[connection signal="area_entered" from="CameraNode/Area2D" to="CameraNode/Camera" method="_on_area_2d_area_entered"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://csl6rynn3mop8"]
+
+[ext_resource type="Script" uid="uid://w8em2aj0ht4p" path="res://node_2d.gd" id="1_ro3yw"]
+[ext_resource type="Texture2D" uid="uid://ct5xedc7i3lco" path="res://assets/arrows.png" id="2_ro3yw"]
+
+[node name="Arrow" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(-1, -1)
+script = ExtResource("1_ro3yw")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ro3yw")
+hframes = 9
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bup0c5wgbsr61"]
+
+[ext_resource type="Script" uid="uid://y7u5lgxh72df" path="res://player.gd" id="1_o7cqd"]
+[ext_resource type="Texture2D" uid="uid://b7klmpw58wkom" path="res://assets/ooeeaa.jpeg" id="2_x2jah"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o7cqd"]
+radius = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7cqd"]
+size = Vector2(91, 87)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_o7cqd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.255)
+texture = ExtResource("2_x2jah")
+
+[node name="QueuedMarks" type="Node2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_o7cqd")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_layers = 3
+debug_enabled = true
+debug_path_custom_color = Color(1, 0, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="NavigationAgent2D"]
+collision_layer = 32
+collision_mask = 65
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationAgent2D/Area2D"]
+shape = SubResource("RectangleShape2D_o7cqd")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="queue_empty" from="." to="." method="_on_queue_empty"]
+[connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

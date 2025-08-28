@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlmsxlbt0a6bb"]
+
+[ext_resource type="Script" uid="uid://xuwrt54rj3ml" path="res://interactible.gd" id="1_mblcr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mblcr"]
+
+[node name="Interactible" type="Node2D"]
+script = ExtResource("1_mblcr")
+
+[node name="MouseField" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseField"]
+shape = SubResource("RectangleShape2D_mblcr")
+
+[connection signal="body_entered" from="MouseField" to="." method="_on_mouse_field_body_entered"]
+[connection signal="mouse_entered" from="MouseField" to="." method="_on_mouse_field_mouse_entered"]
+[connection signal="mouse_exited" from="MouseField" to="." method="_on_mouse_field_mouse_exited"]
