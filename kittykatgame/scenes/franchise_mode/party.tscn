@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://7043hntij4xx"]
+[gd_scene format=3 uid="uid://7043hntij4xx"]
 
 [ext_resource type="Script" uid="uid://cuu8v4q18pete" path="res://scenes/franchise_mode/party.gd" id="1_rnofy"]
 [ext_resource type="PackedScene" uid="uid://b7q5eweawywqb" path="res://scenes/franchise_mode/debug_textpopup.tscn" id="2_1ijwp"]
@@ -7,59 +7,60 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ac6gv"]
 size = Vector2(50, 50)
 
-[node name="Party" type="Node2D"]
+[node name="Party" type="Node2D" unique_id=1136942380]
 script = ExtResource("1_rnofy")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1537872639]
 collision_layer = 16
 collision_mask = 33
 
-[node name="collection_radius" type="CollisionShape2D" parent="Area2D"]
+[node name="collection_radius" type="CollisionShape2D" parent="Area2D" unique_id=513053439]
 shape = SubResource("RectangleShape2D_ac6gv")
 disabled = true
 
-[node name="debug_textpopup" parent="." instance=ExtResource("2_1ijwp")]
+[node name="debug_textpopup" parent="." unique_id=1770590845 instance=ExtResource("2_1ijwp")]
+visible = false
 offset_top = 40.0
 offset_bottom = 40.0
 
-[node name="HeartContainer" type="Node2D" parent="."]
+[node name="HeartContainer" type="Node2D" parent="." unique_id=211976530]
 position = Vector2(0, 30)
 
-[node name="H1" type="Sprite2D" parent="HeartContainer"]
+[node name="H1" type="Sprite2D" parent="HeartContainer" unique_id=1462232266]
 position = Vector2(-16, 0)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_02kmk")
 hframes = 3
 
-[node name="H2" type="Sprite2D" parent="HeartContainer"]
+[node name="H2" type="Sprite2D" parent="HeartContainer" unique_id=1096140279]
 position = Vector2(-8, 0)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_02kmk")
 hframes = 3
 
-[node name="H3" type="Sprite2D" parent="HeartContainer"]
+[node name="H3" type="Sprite2D" parent="HeartContainer" unique_id=1008815273]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_02kmk")
 hframes = 3
 
-[node name="H4" type="Sprite2D" parent="HeartContainer"]
+[node name="H4" type="Sprite2D" parent="HeartContainer" unique_id=1926150372]
 position = Vector2(8, 0)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_02kmk")
 hframes = 3
 
-[node name="H5" type="Sprite2D" parent="HeartContainer"]
+[node name="H5" type="Sprite2D" parent="HeartContainer" unique_id=29970780]
 position = Vector2(16, 0)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_02kmk")
 hframes = 3
 
-[node name="EventTimers" type="Timer" parent="."]
+[node name="EventTimers" type="Timer" parent="." unique_id=2048266922]
 one_shot = true
 
-[node name="SpriteNodes" type="Node2D" parent="."]
+[node name="SpriteNodes" type="Node2D" parent="." unique_id=1590649819]
 
-[node name="EventClicker" type="Button" parent="."]
+[node name="EventClicker" type="Button" parent="." unique_id=1392968062]
 visible = false
 offset_left = -25.0
 offset_top = -25.0

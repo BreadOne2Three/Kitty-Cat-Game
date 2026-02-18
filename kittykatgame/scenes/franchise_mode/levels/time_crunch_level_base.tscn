@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bcifgs61lqtjb"]
+[gd_scene format=3 uid="uid://bcifgs61lqtjb"]
 
 [ext_resource type="Script" uid="uid://ese4thgo3owx" path="res://scenes/franchise_mode/levels/time_crunch_level_base.gd" id="1_vam6w"]
 [ext_resource type="PackedScene" uid="uid://c1nn37ult6cc3" path="res://scenes/franchise_mode/party_spawner.tscn" id="2_3ajwb"]
@@ -15,217 +15,217 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dsr3"]
 size = Vector2(140, 360)
 
-[node name="TimeCrunchLevelBase" type="Node2D"]
+[node name="TimeCrunchLevelBase" type="Node2D" unique_id=1339792782]
 script = ExtResource("1_vam6w")
 level_script = "1-1"
 
-[node name="LengthOfDay" type="Timer" parent="."]
+[node name="LengthOfDay" type="Timer" parent="." unique_id=519297979]
 
-[node name="RecalculateTimers" type="Timer" parent="."]
+[node name="RecalculateTimers" type="Timer" parent="." unique_id=1722487462]
 
-[node name="TableSpawn_Nodes" type="Node2D" parent="."]
+[node name="TableSpawn_Nodes" type="Node2D" parent="." unique_id=1301854966]
 
-[node name="R1C1" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R1C1" type="Node2D" parent="TableSpawn_Nodes" unique_id=1218674265]
 position = Vector2(618, 347)
 
-[node name="R1C2" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R1C2" type="Node2D" parent="TableSpawn_Nodes" unique_id=670831774]
 position = Vector2(768, 347)
 
-[node name="R1C3" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R1C3" type="Node2D" parent="TableSpawn_Nodes" unique_id=524936049]
 position = Vector2(918, 347)
 
-[node name="R1C4" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R1C4" type="Node2D" parent="TableSpawn_Nodes" unique_id=967082343]
 position = Vector2(1068, 347)
 
-[node name="R1C5" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R1C5" type="Node2D" parent="TableSpawn_Nodes" unique_id=1816186687]
 position = Vector2(1218, 347)
 
-[node name="R1C6" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R1C6" type="Node2D" parent="TableSpawn_Nodes" unique_id=321219430]
 position = Vector2(1368, 347)
 
-[node name="R1C7" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R1C7" type="Node2D" parent="TableSpawn_Nodes" unique_id=86036388]
 position = Vector2(1518, 347)
 
-[node name="R1C8" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R1C8" type="Node2D" parent="TableSpawn_Nodes" unique_id=881155018]
 position = Vector2(1668, 347)
 
-[node name="R1C9" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R1C9" type="Node2D" parent="TableSpawn_Nodes" unique_id=690711543]
 position = Vector2(1818, 347)
 
-[node name="R2C1" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R2C1" type="Node2D" parent="TableSpawn_Nodes" unique_id=781181747]
 position = Vector2(618, 472)
 
-[node name="R2C2" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R2C2" type="Node2D" parent="TableSpawn_Nodes" unique_id=1989251535]
 position = Vector2(768, 472)
 
-[node name="R2C3" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R2C3" type="Node2D" parent="TableSpawn_Nodes" unique_id=835450577]
 position = Vector2(918, 472)
 
-[node name="R2C4" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R2C4" type="Node2D" parent="TableSpawn_Nodes" unique_id=351503370]
 position = Vector2(1068, 472)
 
-[node name="R2C5" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R2C5" type="Node2D" parent="TableSpawn_Nodes" unique_id=1783615913]
 position = Vector2(1218, 472)
 
-[node name="R2C6" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R2C6" type="Node2D" parent="TableSpawn_Nodes" unique_id=685455130]
 position = Vector2(1368, 472)
 
-[node name="R2C7" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R2C7" type="Node2D" parent="TableSpawn_Nodes" unique_id=712711923]
 position = Vector2(1518, 472)
 
-[node name="R2C8" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R2C8" type="Node2D" parent="TableSpawn_Nodes" unique_id=1151410091]
 position = Vector2(1668, 472)
 
-[node name="R2C9" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R2C9" type="Node2D" parent="TableSpawn_Nodes" unique_id=1050601253]
 position = Vector2(1818, 472)
 
-[node name="R3C1" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R3C1" type="Node2D" parent="TableSpawn_Nodes" unique_id=1932548181]
 position = Vector2(618, 597)
 
-[node name="R3C2" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R3C2" type="Node2D" parent="TableSpawn_Nodes" unique_id=1917421506]
 position = Vector2(768, 597)
 
-[node name="R3C3" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R3C3" type="Node2D" parent="TableSpawn_Nodes" unique_id=1760967038]
 position = Vector2(918, 597)
 
-[node name="R3C4" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R3C4" type="Node2D" parent="TableSpawn_Nodes" unique_id=32451840]
 position = Vector2(1068, 597)
 
-[node name="R3C5" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R3C5" type="Node2D" parent="TableSpawn_Nodes" unique_id=895686660]
 position = Vector2(1218, 597)
 
-[node name="R3C6" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R3C6" type="Node2D" parent="TableSpawn_Nodes" unique_id=1973805932]
 position = Vector2(1368, 597)
 
-[node name="R3C7" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R3C7" type="Node2D" parent="TableSpawn_Nodes" unique_id=1424991166]
 position = Vector2(1518, 597)
 
-[node name="R3C8" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R3C8" type="Node2D" parent="TableSpawn_Nodes" unique_id=152254951]
 position = Vector2(1668, 597)
 
-[node name="R3C9" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R3C9" type="Node2D" parent="TableSpawn_Nodes" unique_id=51694112]
 position = Vector2(1818, 597)
 
-[node name="R4C1" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R4C1" type="Node2D" parent="TableSpawn_Nodes" unique_id=1656982948]
 position = Vector2(618, 722)
 
-[node name="R4C2" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R4C2" type="Node2D" parent="TableSpawn_Nodes" unique_id=61744912]
 position = Vector2(768, 722)
 
-[node name="R4C3" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R4C3" type="Node2D" parent="TableSpawn_Nodes" unique_id=137914068]
 position = Vector2(918, 722)
 
-[node name="R4C4" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R4C4" type="Node2D" parent="TableSpawn_Nodes" unique_id=1725200725]
 position = Vector2(1068, 722)
 
-[node name="R4C5" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R4C5" type="Node2D" parent="TableSpawn_Nodes" unique_id=388506611]
 position = Vector2(1218, 722)
 
-[node name="R4C6" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R4C6" type="Node2D" parent="TableSpawn_Nodes" unique_id=1523056011]
 position = Vector2(1368, 722)
 
-[node name="R4C7" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R4C7" type="Node2D" parent="TableSpawn_Nodes" unique_id=1532758731]
 position = Vector2(1518, 722)
 
-[node name="R4C8" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R4C8" type="Node2D" parent="TableSpawn_Nodes" unique_id=621574418]
 position = Vector2(1668, 722)
 
-[node name="R4C9" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R4C9" type="Node2D" parent="TableSpawn_Nodes" unique_id=1205898517]
 position = Vector2(1818, 722)
 
-[node name="R5C1" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R5C1" type="Node2D" parent="TableSpawn_Nodes" unique_id=1813733497]
 position = Vector2(618, 847)
 
-[node name="R5C2" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R5C2" type="Node2D" parent="TableSpawn_Nodes" unique_id=1264498989]
 position = Vector2(768, 847)
 
-[node name="R5C3" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R5C3" type="Node2D" parent="TableSpawn_Nodes" unique_id=2120425222]
 position = Vector2(918, 847)
 
-[node name="R5C4" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R5C4" type="Node2D" parent="TableSpawn_Nodes" unique_id=1109284482]
 position = Vector2(1068, 847)
 
-[node name="R5C5" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R5C5" type="Node2D" parent="TableSpawn_Nodes" unique_id=544251579]
 position = Vector2(1218, 847)
 
-[node name="R5C6" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R5C6" type="Node2D" parent="TableSpawn_Nodes" unique_id=865336396]
 position = Vector2(1368, 847)
 
-[node name="R5C7" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R5C7" type="Node2D" parent="TableSpawn_Nodes" unique_id=108148444]
 position = Vector2(1518, 847)
 
-[node name="R5C8" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R5C8" type="Node2D" parent="TableSpawn_Nodes" unique_id=2003623719]
 position = Vector2(1668, 847)
 
-[node name="R5C9" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R5C9" type="Node2D" parent="TableSpawn_Nodes" unique_id=1376541714]
 position = Vector2(1818, 847)
 
-[node name="R6C1" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R6C1" type="Node2D" parent="TableSpawn_Nodes" unique_id=259702781]
 position = Vector2(618, 972)
 
-[node name="R6C2" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R6C2" type="Node2D" parent="TableSpawn_Nodes" unique_id=1520402103]
 position = Vector2(768, 972)
 
-[node name="R6C3" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R6C3" type="Node2D" parent="TableSpawn_Nodes" unique_id=813722180]
 position = Vector2(918, 972)
 
-[node name="R6C4" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R6C4" type="Node2D" parent="TableSpawn_Nodes" unique_id=879172660]
 position = Vector2(1068, 972)
 
-[node name="R6C5" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R6C5" type="Node2D" parent="TableSpawn_Nodes" unique_id=749083901]
 position = Vector2(1218, 972)
 
-[node name="R6C6" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R6C6" type="Node2D" parent="TableSpawn_Nodes" unique_id=1061748814]
 position = Vector2(1368, 972)
 
-[node name="R6C7" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R6C7" type="Node2D" parent="TableSpawn_Nodes" unique_id=112525122]
 position = Vector2(1518, 972)
 
-[node name="R6C8" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R6C8" type="Node2D" parent="TableSpawn_Nodes" unique_id=1068999863]
 position = Vector2(1668, 972)
 
-[node name="R6C9" type="Node2D" parent="TableSpawn_Nodes"]
+[node name="R6C9" type="Node2D" parent="TableSpawn_Nodes" unique_id=336217663]
 position = Vector2(1818, 972)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1853906569]
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_3ajwb")]
+[node name="PauseMenu" parent="CanvasLayer" unique_id=1768803495 instance=ExtResource("3_3ajwb")]
 metadata/_edit_use_anchors_ = true
 
-[node name="WorldTileMapLayers" parent="." instance=ExtResource("5_422im")]
+[node name="WorldTileMapLayers" parent="." unique_id=552252112 instance=ExtResource("5_422im")]
 position = Vector2(-186, 276)
 
-[node name="PartySpawner" parent="." instance=ExtResource("2_3ajwb")]
+[node name="PartySpawner" parent="." unique_id=1008357942 instance=ExtResource("2_3ajwb")]
 position = Vector2(-65, 318)
 
-[node name="Counter" parent="." instance=ExtResource("2_8f2pu")]
+[node name="Counter" parent="." unique_id=2086536309 instance=ExtResource("2_8f2pu")]
 position = Vector2(623, 146)
 
-[node name="CameraNode" type="Node2D" parent="."]
+[node name="CameraNode" type="Node2D" parent="." unique_id=1390397295]
 
-[node name="Camera" type="Camera2D" parent="CameraNode"]
+[node name="Camera" type="Camera2D" parent="CameraNode" unique_id=400292354]
 position = Vector2(-97, 180)
 script = ExtResource("5_6dsr3")
 
-[node name="Positions" type="Node2D" parent="CameraNode/Camera"]
+[node name="Positions" type="Node2D" parent="CameraNode/Camera" unique_id=1716881100]
 
-[node name="EntrancePosition" type="Node2D" parent="CameraNode/Camera/Positions"]
+[node name="EntrancePosition" type="Node2D" parent="CameraNode/Camera/Positions" unique_id=397339411]
 
-[node name="DiningMainPosition" type="Node2D" parent="CameraNode/Camera/Positions"]
+[node name="DiningMainPosition" type="Node2D" parent="CameraNode/Camera/Positions" unique_id=1158297932]
 position = Vector2(650, 0)
 
-[node name="ShopPosition" type="Node2D" parent="CameraNode/Camera/Positions"]
+[node name="ShopPosition" type="Node2D" parent="CameraNode/Camera/Positions" unique_id=441601666]
 position = Vector2(0, -250)
 
-[node name="DiningSouthPosition" type="Node2D" parent="CameraNode/Camera/Positions"]
+[node name="DiningSouthPosition" type="Node2D" parent="CameraNode/Camera/Positions" unique_id=1532969401]
 position = Vector2(650, 300)
 
-[node name="KitchenPosition" type="Node2D" parent="CameraNode/Camera/Positions"]
+[node name="KitchenPosition" type="Node2D" parent="CameraNode/Camera/Positions" unique_id=166826138]
 
-[node name="BathroomPosition" type="Node2D" parent="CameraNode/Camera/Positions"]
+[node name="BathroomPosition" type="Node2D" parent="CameraNode/Camera/Positions" unique_id=1732115795]
 position = Vector2(2500, 0)
 
-[node name="EntranceFromMainDiningArrow" parent="CameraNode" instance=ExtResource("6_422im")]
+[node name="EntranceFromMainDiningArrow" parent="CameraNode" unique_id=365988164 instance=ExtResource("6_422im")]
 offset_left = 250.0
 offset_top = 368.0
 offset_right = 250.0
@@ -234,7 +234,7 @@ scale = Vector2(1, 1)
 kind = 2
 flip = true
 
-[node name="MainDiningFromEntranceArrow" parent="CameraNode" instance=ExtResource("6_422im")]
+[node name="MainDiningFromEntranceArrow" parent="CameraNode" unique_id=259618665 instance=ExtResource("6_422im")]
 offset_left = 200.0
 offset_top = 368.0
 offset_right = 200.0
@@ -243,7 +243,8 @@ rotation = -3.14159
 scale = Vector2(1, -1)
 kind = 2
 
-[node name="BathroomArrow" parent="CameraNode" instance=ExtResource("6_422im")]
+[node name="BathroomArrow" parent="CameraNode" unique_id=523477616 instance=ExtResource("6_422im")]
+visible = false
 offset_left = 800.0
 offset_top = 300.0
 offset_right = 800.0
@@ -252,7 +253,8 @@ rotation = -3.14159
 scale = Vector2(1, -1)
 kind = 1
 
-[node name="SouthDiningArrow" parent="CameraNode" instance=ExtResource("6_422im")]
+[node name="SouthDiningArrow" parent="CameraNode" unique_id=706481809 instance=ExtResource("6_422im")]
+visible = false
 offset_left = 850.0
 offset_top = 368.0
 offset_right = 850.0
@@ -260,7 +262,8 @@ offset_bottom = 368.0
 rotation = -3.14159
 scale = Vector2(1, -1)
 
-[node name="MainDiningFromSouthArrow" parent="CameraNode" instance=ExtResource("6_422im")]
+[node name="MainDiningFromSouthArrow" parent="CameraNode" unique_id=1635807674 instance=ExtResource("6_422im")]
+visible = false
 offset_left = 850.0
 offset_top = 368.0
 offset_right = 850.0
@@ -269,57 +272,57 @@ rotation = -3.14159
 scale = Vector2(1, -1)
 flip = true
 
-[node name="Area2D" type="Area2D" parent="CameraNode"]
+[node name="Area2D" type="Area2D" parent="CameraNode" unique_id=1228790417]
 collision_layer = 32
 collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraNode/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraNode/Area2D" unique_id=157217961]
 position = Vector2(151, 180)
 shape = SubResource("RectangleShape2D_6dsr3")
 
-[node name="GUI_LAYER" type="CanvasLayer" parent="."]
+[node name="GUI_LAYER" type="CanvasLayer" parent="." unique_id=926979909]
 
-[node name="GUI" parent="GUI_LAYER" instance=ExtResource("7_f2n1h")]
+[node name="GUI" parent="GUI_LAYER" unique_id=1244561675 instance=ExtResource("7_f2n1h")]
 mouse_filter = 2
 
-[node name="TableSpawns" type="Node2D" parent="."]
+[node name="TableSpawns" type="Node2D" parent="." unique_id=1385529527]
 
-[node name="CustomerTable" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+[node name="CustomerTable" parent="TableSpawns" unique_id=338865803 instance=ExtResource("9_xd40v")]
 position = Vector2(418, 334)
 table_num = 1
 
-[node name="CustomerTable2" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+[node name="CustomerTable2" parent="TableSpawns" unique_id=133487027 instance=ExtResource("9_xd40v")]
 position = Vector2(639, 333)
 table_num = 2
 
-[node name="CustomerTable3" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+[node name="CustomerTable3" parent="TableSpawns" unique_id=1039131499 instance=ExtResource("9_xd40v")]
 position = Vector2(161, 464)
 table_num = 3
 
-[node name="CustomerTable4" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+[node name="CustomerTable4" parent="TableSpawns" unique_id=1711942440 instance=ExtResource("9_xd40v")]
 position = Vector2(480, 464)
 table_num = 4
 
-[node name="CustomerTable5" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+[node name="CustomerTable5" parent="TableSpawns" unique_id=114437774 instance=ExtResource("9_xd40v")]
 position = Vector2(687, 464)
 table_num = 5
 
-[node name="CustomerTable6" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+[node name="CustomerTable6" parent="TableSpawns" unique_id=669722461 instance=ExtResource("9_xd40v")]
 position = Vector2(162, 691)
 table_num = 6
 
-[node name="CustomerTable7" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+[node name="CustomerTable7" parent="TableSpawns" unique_id=1638899942 instance=ExtResource("9_xd40v")]
 position = Vector2(438, 691)
 table_num = 7
 
-[node name="CustomerTable8" parent="TableSpawns" instance=ExtResource("9_xd40v")]
+[node name="CustomerTable8" parent="TableSpawns" unique_id=1808261146 instance=ExtResource("9_xd40v")]
 position = Vector2(697, 693)
 table_num = 8
 
-[node name="Player" parent="." instance=ExtResource("10_d0l6u")]
+[node name="Player" parent="." unique_id=123694282 instance=ExtResource("10_d0l6u")]
 position = Vector2(-69, 78)
 
-[node name="OrderManager" parent="." node_paths=PackedStringArray("counter_ref", "table_array", "customerSpawner", "player_ref") instance=ExtResource("11_q5rfs")]
+[node name="OrderManager" parent="." unique_id=910680370 node_paths=PackedStringArray("counter_ref", "table_array", "customerSpawner", "player_ref") instance=ExtResource("11_q5rfs")]
 counter_ref = NodePath("../Counter")
 table_array = NodePath("../TableSpawns")
 customerSpawner = NodePath("../PartySpawner")

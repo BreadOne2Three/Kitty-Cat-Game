@@ -30,7 +30,7 @@ var adjacency_relationship = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	$"../EntranceFromMainDiningArrow".visible = false
 	pass # Replace with function body.
 
 
@@ -60,6 +60,8 @@ func _process(delta: float) -> void:
 func _on_left_arrow_pressed_arrow() -> void:
 	var tween = create_tween()
 	tween.tween_property(self, 'global_position',  state_positions[CAMERA_STATE.ENTRANCE], .1)
+	$"../MainDiningFromEntranceArrow".visible = true
+	$"../EntranceFromMainDiningArrow".visible = false
 		
 	#tween stuff
 	curr_state = CAMERA_STATE.ENTRANCE
@@ -68,7 +70,10 @@ func _on_left_arrow_pressed_arrow() -> void:
 func _on_right_arrow_pressed_arrow() -> void:
 	var tween = create_tween()
 	tween.tween_property(self, 'global_position', state_positions[CAMERA_STATE.DINING_MAIN], .1)
-		
+	$"../MainDiningFromEntranceArrow".visible = false
+	$"../EntranceFromMainDiningArrow".visible = true
+	
+	
 	#tween stuff
 	curr_state = CAMERA_STATE.DINING_MAIN
 
